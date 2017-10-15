@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvase test</title>
+	<style type="text/css">
+ 	align-items: center;
+   	  
+    </style>
+</head>
+<body>
+<div id='content'>
+<canvas id="canvas" width="400" height="600"></canvas>
+<div id="show" style="width: 50px" height="20px"></div>
+</div>
+<script type="text/javascript">
+
+	var canvas=document.getElementById('canvas');
+	if(canvas.getContext){
+		var ctx=canvas.getContext('2d');
+		ctx.beginPath();
+    ctx.lineWidth=1;
+    ctx.strokeStyle='#000';
+    ctx.arc(200,175,175,0.7*Math.PI,0.3*Math.PI);
+    ctx.fillStyle='#0bb0da';
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle='#fff';
+    ctx.moveTo(110,110);
+    ctx.quadraticCurveTo(-10,200,120,315);
+    ctx.lineTo(280,315);
+    ctx.quadraticCurveTo(410,200,290,110);
+    ctx.lineTo(110,110);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.lineWidth=1;
+    ctx.fillStyle='#fff';
+    ctx.moveTo(110,110);
+    ctx.bezierCurveTo(110,25,200,25,200,100);
+    ctx.bezierCurveTo(200,175,110,175,110,100);
+    ctx.moveTo(200, 100);
+    ctx.bezierCurveTo(200, 25, 290, 25, 290, 100);
+    ctx.bezierCurveTo(290, 175, 200, 175, 200, 100);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle='#000';
+    ctx.arc(230,130,12,0,2*Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle='#000';
+    ctx.arc(170,130,12,0,2*Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+
+
+
+	}
+
+  (function (){
+    let x=event.clientX;
+    let y=event.clientY;
+    let out = document.getElementById("put");
+    out.innerHTML = "x:" + x + "y:" + y;
+  })(window.event)
+
+	
+</script>
+</body>
+</html>
