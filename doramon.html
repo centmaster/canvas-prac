@@ -59,15 +59,128 @@
     ctx.fill();
     ctx.stroke();
 
+    ctx.beginPath();
+    ctx.arc(200,165,25,0,2*Math.PI);
+    ctx.fillStyle='#d05823';
+    ctx.fill();
+    ctx.stroke();
 
+    ctx.beginPath();
+    ctx.moveTo(80,175);
+    ctx.lineTo(150,195);
+    ctx.moveTo(80,200);
+    ctx.lineTo(150,205);
+    ctx.moveTo(80,225);
+    ctx.lineTo(150,215);
+    ctx.moveTo(200,195);
+    ctx.lineTo(200,290);
+    ctx.moveTo(250,195);
+    ctx.lineTo(320,175);
+    ctx.moveTo(250,205);
+    ctx.lineTo(320,200);
+    ctx.moveTo(250,215);
+    ctx.lineTo(320,225);
+    ctx.stroke();
 
+    ctx.moveTo(80,240);
+    ctx.quadraticCurveTo(200,350,320,240);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(96,316);
+    ctx.lineTo(305,316);
+    ctx.lineTo(320,316);
+    ctx.arcTo(330,316,330,326,10);
+    ctx.lineTo(330,336);
+    ctx.arcTo(330, 346, 305, 346, 10);
+    ctx.lineTo(81,346);
+    ctx.arcTo(71,346,71,336,10);
+    ctx.lineTo(71,326);
+    ctx.arcTo(71, 316, 81, 316, 10);
+    ctx.lineTo(96,316);
+    ctx.fillStyle = '#b13209';
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle = '#0bb0da';
+    ctx.moveTo(80,346);
+    ctx.lineTo(26,406);
+    ctx.lineTo(65,440);
+    ctx.lineTo(85, 418);
+    ctx.lineTo(85, 528);
+    ctx.lineTo(185, 528);
+        //右衣服
+    ctx.lineTo(315, 528);
+    ctx.lineTo(315, 418);
+    ctx.lineTo(337, 440);
+    ctx.lineTo(374, 406);
+    ctx.lineTo(320, 346);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle = '#fff';
+    ctx.arc(37, 433, 30, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+        //右手
+    ctx.beginPath();
+    ctx.fillStyle = '#fff';
+    ctx.arc(363, 433, 30, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle = '#fff';
+    ctx.arc(200, 400, 91, 1.8 * Math.PI, 1.2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle = '#fff';
+    ctx.moveTo(130, 394);
+    ctx.lineTo(270, 394);
+    ctx.moveTo(130, 394);
+    ctx.bezierCurveTo(130, 490, 270, 490, 270, 394);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle = '#fff';
+    ctx.arc(200, 529, 20,Math.PI, 0);
+    ctx.fill();
+    ctx.stroke();
+        /*脚*/
+        //左脚
+    ctx.beginPath();
+    ctx.fillStyle='#fff';
+    ctx.moveTo(180,528);
+    ctx.lineTo(72,528);
+    ctx.bezierCurveTo(52,528,52,558,72,558);
+    ctx.lineTo(180,558);
+    ctx.moveTo(180,558);
+    ctx.bezierCurveTo(200,558,200,528,180,528);
+    ctx.fill();
+    ctx.stroke();
+        //右脚
+    ctx.beginPath();
+    ctx.fillStyle='#fff';
+    ctx.moveTo(220,528);
+    ctx.lineTo(328,528);
+    ctx.bezierCurveTo(348,528,348,558,328,558);
+    ctx.lineTo(220,558);
+    ctx.moveTo(220,558);
+    ctx.bezierCurveTo(200,558,200,528,220,528);
+    ctx.fill();
+    ctx.stroke();
 
 	}
 
   (function (){
     let x=event.clientX;
     let y=event.clientY;
-    let out = document.getElementById("put");
+    let out = document.getElementById("show");
     out.innerHTML = "x:" + x + "y:" + y;
   })(window.event)
 
